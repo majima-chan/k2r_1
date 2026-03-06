@@ -191,7 +191,8 @@ def clear_old():
 
 
 # ══════════════════════════════════════════════════════
+port = int(os.environ.get("PORT", 10000))
+
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
     print(f"🚀 k2r_1 Session Server running on port {port}")
     app.run(host="0.0.0.0", port=port, debug=False)
